@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#3B4855"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:id="@+id/detectarAtaquesBotonMMenu2"
+        android:layout_width="329dp"
+        android:layout_height="152dp"
+        android:backgroundTint="#C9D6E3"
+        android:shadowColor="#FFFFFF"
+        android:textColorHint="#EAEAEA"
+        android:textColorLink="#DCDCDC"
+        app:layout_constraintBottom_toTopOf="@+id/realizarAtaquesBotonMMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:rippleColor="#D7D7D7"
+        app:strokeColor="#FFFFFF"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/detectarAtaquesMMenuIco"
+        android:layout_width="281dp"
+        android:layout_height="173dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.238"
+        app:srcCompat="@drawable/detectarataquesmmenuico"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <Button
+        android:id="@+id/realizarAtaquesBotonMMenu"
+        android:layout_width="329dp"
+        android:layout_height="152dp"
+        android:backgroundTint="#C9D6E3"
+        android:shadowColor="#FFFFFF"
+        android:textColorHint="#EAEAEA"
+        android:textColorLink="#DCDCDC"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:rippleColor="#D7D7D7"
+        app:strokeColor="#FFFFFF"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/realizarAtaquesMMenuIco"
+        android:layout_width="281dp"
+        android:layout_height="173dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/realizarAtaquesBotonMMenu"
+        app:layout_constraintStart_toStartOf="@+id/realizarAtaquesBotonMMenu"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.502"
+        app:srcCompat="@drawable/realizarataquesmmenuico"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <Button
+        android:id="@+id/MitigarAtaquesBotonMMenu"
+        android:layout_width="329dp"
+        android:layout_height="152dp"
+        android:backgroundTint="#C9D6E3"
+        android:shadowColor="#FFFFFF"
+        android:textColorHint="#EAEAEA"
+        android:textColorLink="#DCDCDC"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/realizarAtaquesBotonMMenu"
+        app:rippleColor="#D7D7D7"
+        app:strokeColor="#FFFFFF"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/MitigarAtaquesMMenuIco"
+        android:layout_width="281dp"
+        android:layout_height="173dp"
+        app:layout_constraintBottom_toBottomOf="@+id/MitigarAtaquesBotonMMenu"
+        app:layout_constraintEnd_toEndOf="@+id/MitigarAtaquesBotonMMenu"
+        app:layout_constraintStart_toStartOf="@+id/MitigarAtaquesBotonMMenu"
+        app:layout_constraintTop_toTopOf="@+id/MitigarAtaquesBotonMMenu"
+        app:srcCompat="@drawable/mitigarataquesmmenuico"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="149dp"
+        android:layout_height="53dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="PEKKA"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#CCCCCC"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.069"
+        tools:ignore="HardcodedText,TextSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
