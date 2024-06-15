@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:rippleColor="#D7D7D7"
         app:strokeColor="#FFFFFF"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,VisualLintButtonSize,VisualLintOverlap" />
 
     <ImageView
         android:id="@+id/detectarAtaquesMMenuIco"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:rippleColor="#D7D7D7"
         app:strokeColor="#FFFFFF"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,VisualLintButtonSize,VisualLintOverlap" />
 
     <ImageView
         android:id="@+id/realizarAtaquesMMenuIco"
@@ -86,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/realizarAtaquesBotonMMenu"
         app:rippleColor="#D7D7D7"
         app:strokeColor="#FFFFFF"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,VisualLintOverlap,VisualLintButtonSize" />
 
     <ImageView
         android:id="@+id/MitigarAtaquesMMenuIco"
