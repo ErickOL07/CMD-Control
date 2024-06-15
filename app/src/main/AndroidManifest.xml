@@ -2,6 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
+
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -21,6 +32,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".detectar_ataques.detectar_ataque" />
+        <receiver android:name=".detectar_ataques.conexiones.ReceptorConexionExitosa" />
+        <receiver android:name=".detectar_ataques.conexiones.ReceptorConexionFallida" />
+        <activity android:name=".mitigar_ataques.mitigar_ataque" />
+        <activity android:name=".realizar_ataques.realizar_ataque" />
+        <activity android:name=".realizar_ataques.DosDetailsActivity" />
+        <activity android:name=".realizar_ataques.DoSAttack" />
+        <activity android:name=".mitigar_ataques.AclDetailsActivity" />
+        <activity android:name=".mitigar_ataques.ACLImplementation" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
