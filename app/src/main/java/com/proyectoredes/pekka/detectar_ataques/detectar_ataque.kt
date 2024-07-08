@@ -1,32 +1,55 @@
 package com.proyectoredes.pekka.detectar_ataques
 
-import android.content.IntentFilter
-import android.net.ConnectivityManager
-import android.net.wifi.WifiManager
+import android.content.Intent
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.proyectoredes.pekka.R
-import com.proyectoredes.pekka.detectar_ataques.conexiones.ReceptorConexionExitosa
-import com.proyectoredes.pekka.detectar_ataques.conexiones.ReceptorConexionFallida
-import com.proyectoredes.pekka.detectar_ataques.contrasenas.ReceptorBroadcast
-import com.proyectoredes.pekka.detectar_ataques.contrasenas.DescubrirRedes
 
 class detectar_ataque : AppCompatActivity() {
 
-
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.detectar_ataques)
 
-        receptorBroadcast.registerNetworkReceiver(this)
+        val btnAbrirNetGuard: Button = findViewById(R.id.botonAbrirNetGuard)
+        btnAbrirNetGuard.setOnClickListener {
+            val abrirNetGuard = AbrirNetGuard(this)
+            abrirNetGuard.abrirApp()
+        }
 
-        val filterConexionExitosa = IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
-        registerReceiver(receptorConexionExitosa, filterConexionExitosa)
+        val btnRegresarMenu: Button = findViewById(R.id.botonVolver)
+        btnRegresarMenu.setOnClickListener {
+            finish()
+        }
 
-        val filterConexionFallida = IntentFilter(WifiManager.SUPPLICANT_STATE_CHANGED_ACTION)
-        registerReceiver(receptorConexionFallida, filterConexionFallida)
+        val botonMostrarCreditos: Button = findViewById(R.id.botonMostrarCreditos)
+        botonMostrarCreditos.setOnClickListener {
+            mostrarCreditosNetGuardBoton()
+        }
 
-        startContinuousTasks()
+        mostrarCreditosNetGuard()
     }
 
+    private fun mostrarCreditosNetGuard() {
+        val creditos = """
+            NetGuard es una aplicación de firewall sin necesidad de root para Android, desarrollada por Marcel Bokhorst (M66B).            
+            Visita el repositorio de NetGuard en GitHub para más detalles: https://github.com/M66B/NetGuard
+        """.trimIndent()
+
+        val textoCreditosNetGuard: TextView = findViewById(R.id.textoCreditosNetGuard)
+        textoCreditosNetGuard.text = creditos
+    }
+
+
+    private fun mostrarCreditosNetGuardBoton() {
+        val url = "https://github.com/M66B/NetGuard"
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        startActivity(intent)
+    }
 }

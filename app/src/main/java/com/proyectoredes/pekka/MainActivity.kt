@@ -25,30 +25,22 @@ class MainActivity : AppCompatActivity() {
         val botonDetectar: Button = findViewById(R.id.detectarAtaquesBotonMMenu2)
 
         botonDetectar.setOnClickListener{
-
             val intent: Intent = Intent(this, detectar_ataque::class.java)
             startActivity(intent)
-
         }
 
         val botonMitigar: Button = findViewById(R.id.MitigarAtaquesBotonMMenu)
 
         botonMitigar.setOnClickListener{
-
             val intent: Intent = Intent(this, mitigar_ataque::class.java)
             startActivity(intent)
-
         }
 
         val botonRealizar: Button = findViewById(R.id.realizarAtaquesBotonMMenu)
 
         botonRealizar.setOnClickListener{
-
             val intent: Intent = Intent(this, realizar_ataque::class.java)
             startActivity(intent)
-
-
         }
-
     }
 }
