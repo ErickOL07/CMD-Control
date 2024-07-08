@@ -29,7 +29,7 @@ Esta aplicación de Android está diseñada para detectar, realizar y mitigar at
 1. Ingrese al siguiente enlace:
 https://drive.google.com/file/d/1YvweMEtXvZe7RmmgEaJBsXmIft5g6Uu_/view
 2. Dele a "Descargar".
-3. En caso solicite, active la instalación de aplicaciones mediante fuentes externas.
+3. En caso le notifique que "Por tu seguridad, el teléfono no tiene permitido actualmente instalar apps desconocidas de esta fuente", dele a "Configuración" y, posteriormente active el interruptor llamado "Permitir aplicaciones de esta fuente".
 4. Ejecute el archivo APK.
 5. Culmine la instalación-
 
