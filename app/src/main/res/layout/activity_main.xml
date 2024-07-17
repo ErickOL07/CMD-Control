@@ -17,85 +17,90 @@
         tools:layout_editor_absoluteY="0dp" />
 
     <Button
-        android:id="@+id/detectarAtaquesBotonMMenu2"
+        android:id="@+id/botonRegistrar"
+        android:layout_width="326dp"
+        android:layout_height="42dp"
+        android:text="Registrar IP"
+        app:layout_constraintBottom_toTopOf="@+id/ingresarComandosMMenuIco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.816" />
+
+    <EditText
+        android:id="@+id/campoIPv4"
+        android:layout_width="326dp"
+        android:layout_height="41dp"
+        android:hint="IPv4 del servidor"
+        android:inputType="text"
+        android:shadowColor="#FFFFFF"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="#919191"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/botonRegistrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/ingresarComandosBotonMMenu"
         android:layout_width="329dp"
         android:layout_height="152dp"
         android:backgroundTint="#C9D6E3"
         android:shadowColor="#FFFFFF"
         android:textColorHint="#EAEAEA"
         android:textColorLink="#DCDCDC"
-        app:layout_constraintBottom_toTopOf="@+id/realizarAtaquesBotonMMenu"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.342"
         app:rippleColor="#D7D7D7"
         app:strokeColor="#FFFFFF"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck,VisualLintButtonSize,VisualLintOverlap" />
 
+    <Button
+        android:id="@+id/implementarACLBotonMMenu"
+        android:layout_width="329dp"
+        android:layout_height="152dp"
+        android:backgroundTint="#C9D6E3"
+        android:shadowColor="#FFFFFF"
+        android:textColorHint="#EAEAEA"
+        android:textColorLink="#DCDCDC"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingresarComandosBotonMMenu"
+        app:layout_constraintVertical_bias="0.269"
+        app:rippleColor="#D7D7D7"
+        app:strokeColor="#FFFFFF"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,VisualLintOverlap,VisualLintButtonSize" />
+
     <ImageView
-        android:id="@+id/detectarAtaquesMMenuIco"
+        android:id="@+id/ingresarComandosMMenuIco"
         android:layout_width="281dp"
         android:layout_height="173dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.238"
+        app:layout_constraintVertical_bias="0.449"
         app:srcCompat="@drawable/detectarataquesmmenuico"
         tools:ignore="ContentDescription,MissingConstraints" />
 
-    <Button
-        android:id="@+id/realizarAtaquesBotonMMenu"
-        android:layout_width="329dp"
-        android:layout_height="152dp"
-        android:backgroundTint="#C9D6E3"
-        android:shadowColor="#FFFFFF"
-        android:textColorHint="#EAEAEA"
-        android:textColorLink="#DCDCDC"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:rippleColor="#D7D7D7"
-        app:strokeColor="#FFFFFF"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,VisualLintButtonSize,VisualLintOverlap" />
-
     <ImageView
-        android:id="@+id/realizarAtaquesMMenuIco"
+        android:id="@+id/implementarACLMMenuIco"
         android:layout_width="281dp"
         android:layout_height="173dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/realizarAtaquesBotonMMenu"
-        app:layout_constraintStart_toStartOf="@+id/realizarAtaquesBotonMMenu"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.502"
-        app:srcCompat="@drawable/realizarataquesmmenuico"
-        tools:ignore="ContentDescription,MissingConstraints" />
-
-    <Button
-        android:id="@+id/MitigarAtaquesBotonMMenu"
-        android:layout_width="329dp"
-        android:layout_height="152dp"
-        android:backgroundTint="#C9D6E3"
-        android:shadowColor="#FFFFFF"
-        android:textColorHint="#EAEAEA"
-        android:textColorLink="#DCDCDC"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/realizarAtaquesBotonMMenu"
-        app:rippleColor="#D7D7D7"
-        app:strokeColor="#FFFFFF"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,VisualLintOverlap,VisualLintButtonSize" />
-
-    <ImageView
-        android:id="@+id/MitigarAtaquesMMenuIco"
-        android:layout_width="281dp"
-        android:layout_height="173dp"
-        app:layout_constraintBottom_toBottomOf="@+id/MitigarAtaquesBotonMMenu"
-        app:layout_constraintEnd_toEndOf="@+id/MitigarAtaquesBotonMMenu"
-        app:layout_constraintStart_toStartOf="@+id/MitigarAtaquesBotonMMenu"
-        app:layout_constraintTop_toTopOf="@+id/MitigarAtaquesBotonMMenu"
+        app:layout_constraintBottom_toBottomOf="@+id/implementarACLBotonMMenu"
+        app:layout_constraintEnd_toEndOf="@+id/implementarACLBotonMMenu"
+        app:layout_constraintStart_toStartOf="@+id/implementarACLBotonMMenu"
+        app:layout_constraintTop_toTopOf="@+id/implementarACLBotonMMenu"
+        app:layout_constraintVertical_bias="0.523"
         app:srcCompat="@drawable/mitigarataquesmmenuico"
         tools:ignore="ContentDescription,MissingConstraints" />
 

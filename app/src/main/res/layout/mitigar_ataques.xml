@@ -6,29 +6,29 @@
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/et_target_ip"
+        android:id="@+id/campoComando"
         android:layout_width="match_parent"
-        android:layout_height="98dp"
-        android:hint="Ingrese la IP de destino" />
+        android:layout_height="wrap_content"
+        android:hint="Ingresa el comando"
+        android:inputType="text" />
 
     <Button
-        android:id="@+id/btn_implement_acl"
-        android:layout_width="381dp"
+        android:id="@+id/botonEnviar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Implementar ACL" />
+        android:text="Enviar" />
 
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="gone" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    <Button
-        android:id="@+id/btn_back_to_main"
-        android:layout_width="381dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Volver al Menú Principal" />
+        <TextView
+            android:id="@+id/textoSalida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:scrollbars="vertical"
+            android:textIsSelectable="true" />
+    </ScrollView>
 </LinearLayout>
-

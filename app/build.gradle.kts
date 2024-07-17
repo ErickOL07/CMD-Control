@@ -47,5 +47,6 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.pcap4j.core)
     implementation(libs.pcap4j.packetfactory.static)
+    implementation ("com.squareup.okio:okio:3.0.0")
 
 }

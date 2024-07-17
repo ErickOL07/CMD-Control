@@ -36,12 +36,12 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".detectar_ataques.detectar_ataque" />
-        <activity android:name=".mitigar_ataques.mitigar_ataque" />
-        <activity android:name=".realizar_ataques.realizar_ataque" />
-        <activity android:name=".realizar_ataques.DosDetailsActivity" />
-        <activity android:name=".realizar_ataques.DoSAttack" />
-        <activity android:name=".mitigar_ataques.AclDetailsActivity" />
-        <activity android:name=".mitigar_ataques.ACLImplementation" />
+        <activity android:name=".implementar_acl.implementar_acl" />
+        <activity android:name=".ingresar_comandos.ingresar_comandos" />
+        <activity android:name=".ingresar_comandos.DosDetailsActivity" />
+        <activity android:name=".ingresar_comandos.DoSAttack" />
+        <activity android:name=".implementar_acl.AclDetailsActivity" />
+        <activity android:name=".implementar_acl.ACLImplementation" />
 
         <meta-data
             android:name="preloaded_fonts"
