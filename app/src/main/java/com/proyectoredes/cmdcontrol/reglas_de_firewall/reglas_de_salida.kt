@@ -1,4 +1,4 @@
-package com.proyectoredes.pekka.implementar_acl
+package com.proyectoredes.cmdcontrol.reglas_de_firewall
 
 import android.content.Context
 import android.os.Bundle
@@ -6,18 +6,18 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.proyectoredes.pekka.R
+import com.proyectoredes.cmdcontrol.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.net.Socket
 
-class implementar_acl : AppCompatActivity() {
+class reglas_de_salida : AppCompatActivity() {
 
     var texto = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.implementar_acl)
+        setContentView(R.layout.reglas_de_salida)
 
         val botonBloquear: Button = findViewById(R.id.botonBloquear)
         val botonDesbloquear: Button = findViewById(R.id.botonDesbloquear)
@@ -27,7 +27,7 @@ class implementar_acl : AppCompatActivity() {
         botonBloquear.setOnClickListener {
             val ip = campoIP.text.toString()
             texto = "Bloqueo de IP $ip\n\n"
-            val comando = "netsh advfirewall firewall add rule name=\"Bloquear IP $ip\" dir=in action=block remoteip=$ip"
+            val comando = "netsh advfirewall firewall add rule name=\"Bloquear IP $ip\" dir=out  action=block remoteip=$ip"
             enviarComando(comando, textoSalida)
         }
 

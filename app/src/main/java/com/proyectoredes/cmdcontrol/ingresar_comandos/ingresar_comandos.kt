@@ -1,4 +1,4 @@
-package com.proyectoredes.pekka.ingresar_comandos
+package com.proyectoredes.cmdcontrol.ingresar_comandos
 
 import android.content.Context
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.proyectoredes.pekka.R
+import com.proyectoredes.cmdcontrol.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -14,13 +14,12 @@ import okio.buffer
 import okio.sink
 import okio.source
 import java.net.Socket
-import com.proyectoredes.pekka.MainActivity
 
 class ingresar_comandos : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.mitigar_ataques)
+        setContentView(R.layout.ingresar_comando)
 
         val botonEnviar: Button = findViewById(R.id.botonEnviar)
         val campoComando: EditText = findViewById(R.id.campoComando)

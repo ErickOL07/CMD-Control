@@ -1,4 +1,4 @@
-package com.proyectoredes.pekka
+package com.proyectoredes.cmdcontrol
 
 import android.content.Context
 import android.content.Intent
@@ -9,8 +9,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.proyectoredes.pekka.implementar_acl.*
-import com.proyectoredes.pekka.ingresar_comandos.*
+import com.proyectoredes.cmdcontrol.reglas_de_firewall.*
+import com.proyectoredes.cmdcontrol.ingresar_comandos.*
 import android.util.Log
 
 
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
         val botonMitigar: Button = findViewById(R.id.implementarACLBotonMMenu)
         botonMitigar.setOnClickListener {
-            val intent: Intent = Intent(this, implementar_acl::class.java)
+            val intent: Intent = Intent(this, reglas_de_firewall::class.java)
             startActivity(intent)
         }
 

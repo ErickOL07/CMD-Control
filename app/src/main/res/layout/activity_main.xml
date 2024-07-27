@@ -20,13 +20,16 @@
         android:id="@+id/botonRegistrar"
         android:layout_width="326dp"
         android:layout_height="42dp"
+        android:backgroundTint="#C9D6E3"
         android:text="Registrar IP"
-        app:layout_constraintBottom_toTopOf="@+id/ingresarComandosMMenuIco"
+        android:textColor="#000000"
+        android:textColorLink="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/ReglasDeEntradaIco"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.816" />
+        app:layout_constraintVertical_bias="0.712" />
 
     <EditText
         android:id="@+id/campoIPv4"
@@ -81,19 +84,19 @@
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck,VisualLintOverlap,VisualLintButtonSize" />
 
     <ImageView
-        android:id="@+id/ingresarComandosMMenuIco"
+        android:id="@+id/ReglasDeEntradaIco"
         android:layout_width="281dp"
         android:layout_height="173dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.449"
-        app:srcCompat="@drawable/detectarataquesmmenuico"
+        app:layout_constraintVertical_bias="0.464"
+        app:srcCompat="@drawable/ingresarcomandosmmenuico"
         tools:ignore="ContentDescription,MissingConstraints" />
 
     <ImageView
-        android:id="@+id/implementarACLMMenuIco"
+        android:id="@+id/reglasDeFirewallMMenuIco"
         android:layout_width="281dp"
         android:layout_height="173dp"
         app:layout_constraintBottom_toBottomOf="@+id/implementarACLBotonMMenu"
@@ -101,15 +104,15 @@
         app:layout_constraintStart_toStartOf="@+id/implementarACLBotonMMenu"
         app:layout_constraintTop_toTopOf="@+id/implementarACLBotonMMenu"
         app:layout_constraintVertical_bias="0.523"
-        app:srcCompat="@drawable/mitigarataquesmmenuico"
+        app:srcCompat="@drawable/reglasdefirewallmmenuico"
         tools:ignore="ContentDescription,MissingConstraints" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="149dp"
-        android:layout_height="53dp"
+        android:layout_width="320dp"
+        android:layout_height="61dp"
         android:fontFamily="@font/alfa_slab_one"
-        android:text="PEKKA"
+        android:text="CMD Control"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textColorLink="#CCCCCC"

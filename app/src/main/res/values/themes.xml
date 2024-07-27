@@ -5,5 +5,5 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.PEKKA" parent="Base.Theme.PEKKA" />
+    <style name="Theme.CMDControl" parent="Base.Theme.PEKKA" />
 </resources>

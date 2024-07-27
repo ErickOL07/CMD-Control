@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#3B4855"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:id="@+id/botonReglas_de_entrada"
+        android:layout_width="329dp"
+        android:layout_height="152dp"
+        android:backgroundTint="#C9D6E3"
+        android:shadowColor="#FFFFFF"
+        android:textColorHint="#EAEAEA"
+        android:textColorLink="#DCDCDC"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.336"
+        app:rippleColor="#D7D7D7"
+        app:strokeColor="#FFFFFF"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,VisualLintButtonSize,VisualLintOverlap" />
+
+    <Button
+        android:id="@+id/botonReglas_de_salida"
+        android:layout_width="329dp"
+        android:layout_height="152dp"
+        android:backgroundTint="#C9D6E3"
+        android:shadowColor="#FFFFFF"
+        android:textColorHint="#EAEAEA"
+        android:textColorLink="#DCDCDC"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonReglas_de_entrada"
+        app:layout_constraintVertical_bias="0.269"
+        app:rippleColor="#D7D7D7"
+        app:strokeColor="#FFFFFF"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,VisualLintOverlap,VisualLintButtonSize" />
+
+    <ImageView
+        android:id="@+id/ReglasDeEntradaIco"
+        android:layout_width="281dp"
+        android:layout_height="173dp"
+        app:layout_constraintBottom_toBottomOf="@+id/botonReglas_de_entrada"
+        app:layout_constraintEnd_toEndOf="@+id/botonReglas_de_entrada"
+        app:layout_constraintStart_toStartOf="@+id/botonReglas_de_entrada"
+        app:layout_constraintTop_toTopOf="@+id/botonReglas_de_entrada"
+        app:layout_constraintVertical_bias="0.464"
+        app:srcCompat="@drawable/reglasdeentradaico"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/reglasDeSalidaIco"
+        android:layout_width="281dp"
+        android:layout_height="173dp"
+        app:layout_constraintBottom_toBottomOf="@+id/botonReglas_de_salida"
+        app:layout_constraintEnd_toEndOf="@+id/botonReglas_de_salida"
+        app:layout_constraintStart_toStartOf="@+id/botonReglas_de_salida"
+        app:layout_constraintTop_toTopOf="@+id/botonReglas_de_salida"
+        app:layout_constraintVertical_bias="0.523"
+        app:srcCompat="@drawable/reglasdesalidaico"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="411dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="52dp"
+        android:background="#C8D5E2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <ImageView
+        android:id="@+id/reglasDeFirewallMMenuIco"
+        android:layout_width="200dp"
+        android:layout_height="135dp"
+        app:layout_constraintBottom_toTopOf="@+id/ReglasDeEntradaIco"
+        app:layout_constraintEnd_toEndOf="@+id/botonReglas_de_salida"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/botonReglas_de_salida"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.32"
+        app:srcCompat="@drawable/reglasdefirewallmmenuico"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

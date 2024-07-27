@@ -11,19 +11,15 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
 
-
-
-
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ico"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/rndico"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PEKKA"
+        android:theme="@style/Theme.CMDControl"
         tools:targetApi="31">
         <activity
             android:name=".TyC"
@@ -35,13 +31,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".detectar_ataques.detectar_ataque" />
-        <activity android:name=".implementar_acl.implementar_acl" />
+        <activity android:name=".reglas_de_firewall.reglas_de_firewall" />
+        <activity android:name=".reglas_de_firewall.reglas_de_entrada" />
+        <activity android:name=".reglas_de_firewall.reglas_de_salida" />
         <activity android:name=".ingresar_comandos.ingresar_comandos" />
-        <activity android:name=".ingresar_comandos.DosDetailsActivity" />
-        <activity android:name=".ingresar_comandos.DoSAttack" />
-        <activity android:name=".implementar_acl.AclDetailsActivity" />
-        <activity android:name=".implementar_acl.ACLImplementation" />
 
         <meta-data
             android:name="preloaded_fonts"

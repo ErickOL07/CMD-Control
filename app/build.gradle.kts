@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.proyectoredes.pekka"
+    namespace = "com.proyectoredes.cmdcontrol"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.proyectoredes.pekka"
+        applicationId = "com.proyectoredes.cmdcontrol"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

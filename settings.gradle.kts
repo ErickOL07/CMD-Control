@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "PEKKA"
+rootProject.name = "CMDControl"
 include(":app")
  

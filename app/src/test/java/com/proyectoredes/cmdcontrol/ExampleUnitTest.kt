@@ -1,4 +1,4 @@
-package com.proyectoredes.pekka
+package com.proyectoredes.cmdcontrol
 
 import org.junit.Test
 

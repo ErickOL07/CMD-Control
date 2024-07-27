@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="540dp"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="-20dp"
+        android:background="#C8D5E2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/reglasDeSalidaIco"
+        android:layout_width="135dp"
+        android:layout_height="74dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="266dp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginEnd="-8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.464"
+        app:srcCompat="@drawable/reglasdesalidaico"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <EditText
+        android:id="@+id/campoIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginRight="32dp"
+        android:hint="Ingrese la IP" />
+
+    <Button
+        android:id="@+id/botonBloquear"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/campoIP"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="1dp"
+        android:text="Bloquear" />
+
+    <Button
+        android:id="@+id/botonDesbloquear"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/campoIP"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="32dp"
+        android:text="Desbloquear" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/textoSalida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/botonDesbloquear"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="32dp"
+            android:text="Salida del comando"
+            android:textSize="16sp" />
+    </ScrollView>
+
+</RelativeLayout>
