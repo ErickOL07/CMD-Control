@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -69,20 +68,19 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-    <TextView
-        android:id="@+id/textoSalida"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/botonDesbloquear"
-        android:layout_marginLeft="32dp"
         android:layout_marginTop="16dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginBottom="32dp"
-        android:text="Salida del comando"
-        android:textSize="16sp" />
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:id="@+id/textoSalida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salida del comando"
+            android:textSize="16sp" />
     </ScrollView>
 
 </RelativeLayout>

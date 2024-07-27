@@ -10,6 +10,9 @@ import com.proyectoredes.cmdcontrol.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import okio.buffer
+import okio.sink
+import okio.source
 import java.net.Socket
 
 class reglas_de_entrada : AppCompatActivity() {
@@ -28,47 +31,52 @@ class reglas_de_entrada : AppCompatActivity() {
             val ip = campoIP.text.toString()
             texto = "Bloqueo de IP $ip\n\n"
             val comando = "netsh advfirewall firewall add rule name=\"Bloquear IP $ip\" dir=in action=block remoteip=$ip"
-            enviarComando(comando, textoSalida)
+            CoroutineScope(Dispatchers.IO).launch {
+                val resultado = enviarComando(comando)
+                runOnUiThread {
+                    textoSalida.text = resultado
+                }
+            }
         }
 
         botonDesbloquear.setOnClickListener {
             val ip = campoIP.text.toString()
             texto = "Desbloqueo de IP $ip\n"
             val comando = "netsh advfirewall firewall delete rule name=\"Bloquear IP $ip\""
-            enviarComando(comando, textoSalida)
+            CoroutineScope(Dispatchers.IO).launch {
+                val resultado = enviarComando(comando)
+                runOnUiThread {
+                    textoSalida.text = resultado
+                }
+            }
         }
     }
 
-    private fun enviarComando(comando: String, textoSalida: TextView) {
-        CoroutineScope(Dispatchers.IO).launch {
-            val resultado = try {
-                val pref = getSharedPreferences("ipv4", Context.MODE_PRIVATE)
-                val IPv4 = pref.getString("ipv4", "")
+    private fun enviarComando(comando: String): String {
+        return try {
+            val pref = getSharedPreferences("ipv4", Context.MODE_PRIVATE)
+            val IPv4 = pref.getString("ipv4", "")
 
-                Socket(IPv4, 9999).use { socket ->
-                    val sink = socket.getOutputStream().bufferedWriter()
-                    val source = socket.getInputStream().bufferedReader()
+            Socket(IPv4, 9999).use { socket ->
+                val sink = socket.sink().buffer()
+                val source = socket.source().buffer()
 
-                    sink.write(comando)
-                    sink.newLine()
-                    sink.flush()
+                sink.writeUtf8(comando)
+                sink.writeUtf8("\n")
+                sink.flush()
 
-                    val resultado = StringBuilder()
-                    resultado.append(texto)
-                    while (true) {
-                        val line = source.readLine() ?: break
-                        if (line == "FinRespuestaComando") break
-                        resultado.append(line).append("\n")
-                    }
-                    resultado.toString().trim()
+                val resultado = StringBuilder()
+                resultado.append(texto)
+                while (true) {
+                    val line = source.readUtf8Line()
+                    if (line == "FinRespuestaComando") break
+                    resultado.append(line).append("\n")
                 }
-            } catch (e: Exception) {
-                e.printStackTrace()
-                "Error: ${e.message}"
+                resultado.toString().trim()
             }
-            runOnUiThread {
-                textoSalida.text = resultado
-            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            "Error: ${e.message}"
         }
     }
 }
